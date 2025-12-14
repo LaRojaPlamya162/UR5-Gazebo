@@ -5,12 +5,13 @@ class RewardFunction():
         self.joint_pos = joint_pos
         self.ball_pos = ball_pos
         self.timestep = timestep
+        self.done = check_if_ball_out_of_table(self.ball_pos)
         self.reward = reward(self.ball_pos, self.joint_pos, check_if_ball_out_of_table(self.ball_pos), self.timestep)
-    
+        #print(self.reward)
 def euclidean_distance(a, b):
     return math.sqrt(sum((x - y) ** 2 for x, y in zip(a, b)))
 def distance_to_nearest_edge(ball_pos):
-    return min(abs(ball_pos[0] - 0),math.abs(0.8 - ball_pos[0]), abs(ball_pos[1] - (-0.4)), abs(0.4 - ball_pos[1]))
+    return min(abs(ball_pos[0] - 0), abs(0.8 - ball_pos[0]), abs(ball_pos[1] - (-0.4)), abs(0.4 - ball_pos[1]))
 def check_if_ball_out_of_table(ball_pos):
     if(ball_pos[2] < 0.414 or ball_pos[0] > 0.8 or ball_pos[0] < 0 or ball_pos[1] > 0.4 or ball_pos[1] < -0.4):
         return False

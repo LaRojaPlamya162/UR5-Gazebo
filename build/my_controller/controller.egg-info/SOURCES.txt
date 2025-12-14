@@ -3,10 +3,11 @@ package.xml
 setup.cfg
 setup.py
 controller/__init__.py
-controller/ball.py
 controller/bc_model.py
 controller/controller.py
+controller/network.py
 controller/reward.py
+controller/sac_model.py
 controller.egg-info/PKG-INFO
 controller.egg-info/SOURCES.txt
 controller.egg-info/dependency_links.txt
