@@ -14,8 +14,8 @@ def distance_to_nearest_edge(ball_pos):
     return min(abs(ball_pos[0] - 0), abs(0.8 - ball_pos[0]), abs(ball_pos[1] - (-0.4)), abs(0.4 - ball_pos[1]))
 def check_if_ball_out_of_table(ball_pos):
     if(ball_pos[2] < 0.414 or ball_pos[0] > 0.8 or ball_pos[0] < 0 or ball_pos[1] > 0.4 or ball_pos[1] < -0.4):
-        return False
-    return True
+        return True
+    return False
 
 def reward(ball_pos, wrist_pos, done, timestep):
     # ---- constants ----
