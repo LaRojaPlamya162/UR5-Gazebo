@@ -1,0 +1,23 @@
+[1.061s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/my_controller': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data
+[1.473s] running develop
+[1.733s] running egg_info
+[1.733s] creating controller.egg-info
+[1.733s] writing controller.egg-info/PKG-INFO
+[1.733s] writing dependency_links to controller.egg-info/dependency_links.txt
+[1.735s] writing entry points to controller.egg-info/entry_points.txt
+[1.735s] writing requirements to controller.egg-info/requires.txt
+[1.735s] writing top-level names to controller.egg-info/top_level.txt
+[1.735s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[1.738s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[1.739s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[1.741s] running build_ext
+[1.743s] Creating /home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[1.746s] Installing controller script to /home/nta/workspaces/ur_gazebo/install/my_controller/lib/controller
+[1.747s] 
+[1.747s] Installed /home/nta/workspaces/ur_gazebo/build/my_controller
+[1.747s] running symlink_data
+[1.747s] symbolically linking /home/nta/workspaces/ur_gazebo/build/my_controller/resource/controller -> /home/nta/workspaces/ur_gazebo/install/my_controller/share/ament_index/resource_index/packages
+[1.747s] creating /home/nta/workspaces/ur_gazebo/install/my_controller/share/controller
+[1.748s] symbolically linking /home/nta/workspaces/ur_gazebo/build/my_controller/package.xml -> /home/nta/workspaces/ur_gazebo/install/my_controller/share/controller
+[1.752s] error: can't copy '/home/nta/workspaces/ur_gazebo/build/my_controller/bc_model.pth': doesn't exist or not a regular file
+[1.816s] Invoked command in '/home/nta/workspaces/ur_gazebo/build/my_controller' returned '1': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data

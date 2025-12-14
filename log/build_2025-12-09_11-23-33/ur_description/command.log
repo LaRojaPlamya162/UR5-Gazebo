@@ -1,0 +1,2 @@
+Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_description': /usr/bin/cmake /home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_description
+Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_description' returned '1': /usr/bin/cmake /home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_description

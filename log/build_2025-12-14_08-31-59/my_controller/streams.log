@@ -1,0 +1,17 @@
+[3.145s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/my_controller': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data
+[4.106s] running develop
+[4.828s] running egg_info
+[4.828s] writing controller.egg-info/PKG-INFO
+[4.831s] writing dependency_links to controller.egg-info/dependency_links.txt
+[4.831s] writing entry points to controller.egg-info/entry_points.txt
+[4.839s] writing requirements to controller.egg-info/requires.txt
+[4.839s] writing top-level names to controller.egg-info/top_level.txt
+[4.848s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[4.852s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[4.858s] running build_ext
+[4.858s] Creating /home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[4.862s] Installing controller script to /home/nta/workspaces/ur_gazebo/install/my_controller/lib/controller
+[4.863s] 
+[4.864s] Installed /home/nta/workspaces/ur_gazebo/build/my_controller
+[4.865s] running symlink_data
+[4.940s] Invoked command in '/home/nta/workspaces/ur_gazebo/build/my_controller' returned '0': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data

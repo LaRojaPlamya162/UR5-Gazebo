@@ -1,0 +1,294 @@
+[0.916s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.916s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71585c34ec80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71585c4940d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71585c4940d0>>, mixin_verb=('build',))
+[2.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.551s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.552s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.553s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/nta/workspaces/ur_gazebo'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.554s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.664s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.664s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.665s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.665s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.665s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.668s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.668s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.668s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.671s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.671s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.671s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.672s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.673s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.673s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.673s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.674s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.675s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.675s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.675s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.676s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extensions ['ignore', 'ignore_ament_install']
+[2.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extension 'ignore'
+[2.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extension 'ignore_ament_install'
+[2.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extensions ['colcon_pkg']
+[2.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extension 'colcon_pkg'
+[2.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extensions ['colcon_meta']
+[2.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extension 'colcon_meta'
+[2.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extensions ['ros']
+[2.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Description) by extension 'ros'
+[2.693s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Universal_Robots_ROS2_Description' with type 'ros.ament_cmake' and name 'ur_description'
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['ignore', 'ignore_ament_install']
+[2.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'ignore'
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'ignore_ament_install'
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['colcon_pkg']
+[2.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'colcon_pkg'
+[2.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['colcon_meta']
+[2.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'colcon_meta'
+[2.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['ros']
+[2.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'ros'
+[2.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['cmake', 'python']
+[2.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'cmake'
+[2.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'python'
+[2.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extensions ['python_setup_py']
+[2.697s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation) by extension 'python_setup_py'
+[2.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[2.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extension 'ignore'
+[2.698s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extension 'ignore_ament_install'
+[2.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extensions ['colcon_pkg']
+[2.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extension 'colcon_pkg'
+[2.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extensions ['colcon_meta']
+[2.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extension 'colcon_meta'
+[2.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extensions ['ros']
+[2.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo) by extension 'ros'
+[2.702s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo' with type 'ros.ament_cmake' and name 'ur_simulation_gazebo'
+[2.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['ignore', 'ignore_ament_install']
+[2.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'ignore'
+[2.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'ignore_ament_install'
+[2.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['colcon_pkg']
+[2.703s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'colcon_pkg'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['colcon_meta']
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'colcon_meta'
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['ros']
+[2.704s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'ros'
+[2.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['cmake', 'python']
+[2.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'cmake'
+[2.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'python'
+[2.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extensions ['python_setup_py']
+[2.705s] Level 1:colcon.colcon_core.package_identification:_identify(src/Universal_Robots_ROS2_Gazebo_Simulation/worlds) by extension 'python_setup_py'
+[2.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[2.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[2.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[2.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[2.710s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_python' and name 'my_controller'
+[2.710s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.710s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.710s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.710s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.710s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.815s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/nta/workspaces/ur_gazebo/install
+[2.830s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 327 installed packages in /opt/ros/humble
+[2.834s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.273s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'ur_description' is in: /home/nta/workspaces/ur_gazebo/install/ur_description, /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding ur_description
+
+This may be promoted to an error in a future release of colcon-override-check.
+[3.275s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_args' from command line to 'None'
+[3.275s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_target' from command line to 'None'
+[3.275s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.275s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[3.275s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_clean_first' from command line to 'False'
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'cmake_force_configure' from command line to 'False'
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'ament_cmake_args' from command line to 'None'
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'my_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.276s] DEBUG:colcon.colcon_core.verb:Building package 'my_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nta/workspaces/ur_gazebo/build/my_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nta/workspaces/ur_gazebo/install/my_controller', 'merge_install': False, 'path': '/home/nta/workspaces/ur_gazebo/src/controller', 'symlink_install': True, 'test_result_base': None}
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_args' from command line to 'None'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target' from command line to 'None'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_cache' from command line to 'False'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_clean_first' from command line to 'False'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'cmake_force_configure' from command line to 'False'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'ament_cmake_args' from command line to 'None'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_cmake_args' from command line to 'None'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'ur_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.278s] DEBUG:colcon.colcon_core.verb:Building package 'ur_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nta/workspaces/ur_gazebo/build/ur_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nta/workspaces/ur_gazebo/install/ur_description', 'merge_install': False, 'path': '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description', 'symlink_install': True, 'test_result_base': None}
+[3.279s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_args' from command line to 'None'
+[3.279s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_target' from command line to 'None'
+[3.279s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.279s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[3.280s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[3.280s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[3.280s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[3.280s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[3.280s] Level 5:colcon.colcon_core.verb:set package 'ur_simulation_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.280s] DEBUG:colcon.colcon_core.verb:Building package 'ur_simulation_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo', 'merge_install': False, 'path': '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo', 'symlink_install': True, 'test_result_base': None}
+[3.281s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.284s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.285s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description' with build type 'ament_cmake'
+[3.285s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description'
+[3.312s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.312s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.313s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.338s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/nta/workspaces/ur_gazebo/src/controller' with build type 'ament_python'
+[3.338s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_controller', 'ament_prefix_path')
+[3.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/ament_prefix_path.ps1'
+[3.343s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/ament_prefix_path.dsv'
+[3.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/ament_prefix_path.sh'
+[3.354s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.354s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --build /home/nta/workspaces/ur_gazebo/build/ur_description -- -j4 -l4
+[4.528s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'my_controller' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[4.531s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'my_controller' doesn't explicitly install the 'package.xml' file (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[4.532s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/nta/workspaces/ur_gazebo/src/controller'
+[4.533s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.533s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --build /home/nta/workspaces/ur_gazebo/build/ur_description -- -j4 -l4
+[4.634s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --install /home/nta/workspaces/ur_gazebo/build/ur_description
+[5.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[5.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --install /home/nta/workspaces/ur_gazebo/build/ur_description
+[5.672s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description' for CMake module files
+[5.688s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description' for CMake config files
+[5.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[5.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[5.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[5.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[5.818s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/bin'
+[5.818s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/lib/pkgconfig/ur_description.pc'
+[5.819s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/lib/python3.10/site-packages'
+[5.819s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/bin'
+[5.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.ps1'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.dsv'
+[5.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.sh'
+[5.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.bash'
+[5.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.zsh'
+[5.845s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nta/workspaces/ur_gazebo/install/ur_description/share/colcon-core/packages/ur_description)
+[5.849s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_description)
+[5.850s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description' for CMake module files
+[5.853s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description' for CMake config files
+[5.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_description', 'cmake_prefix_path')
+[5.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.ps1'
+[5.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.dsv'
+[5.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/hook/cmake_prefix_path.sh'
+[5.877s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/bin'
+[5.877s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/lib/pkgconfig/ur_description.pc'
+[5.879s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/lib/python3.10/site-packages'
+[5.880s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_description/bin'
+[5.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.ps1'
+[5.885s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.dsv'
+[5.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.sh'
+[5.893s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.bash'
+[5.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.zsh'
+[5.899s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nta/workspaces/ur_gazebo/install/ur_description/share/colcon-core/packages/ur_description)
+[5.903s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo' with build type 'ament_cmake'
+[5.903s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo'
+[5.904s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.904s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo': CMAKE_PREFIX_PATH=/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --build /home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo -- -j4 -l4
+[6.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nta/workspaces/ur_gazebo/build/my_controller': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data
+[8.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --build /home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo -- -j4 -l4
+[8.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo': CMAKE_PREFIX_PATH=/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --install /home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo
+[8.290s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_simulation_gazebo)
+[8.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/opt/ros/humble /usr/bin/cmake --install /home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo
+[8.293s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo' for CMake module files
+[8.300s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo' for CMake config files
+[8.317s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_simulation_gazebo', 'cmake_prefix_path')
+[8.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.ps1'
+[8.320s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.dsv'
+[8.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.sh'
+[8.327s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/bin'
+[8.328s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/lib/pkgconfig/ur_simulation_gazebo.pc'
+[8.328s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/lib/python3.10/site-packages'
+[8.329s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/bin'
+[8.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.ps1'
+[8.333s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.dsv'
+[8.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.sh'
+[8.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.bash'
+[8.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.zsh'
+[8.345s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/colcon-core/packages/ur_simulation_gazebo)
+[8.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur_simulation_gazebo)
+[8.350s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo' for CMake module files
+[8.352s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo' for CMake config files
+[8.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur_simulation_gazebo', 'cmake_prefix_path')
+[8.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.ps1'
+[8.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.dsv'
+[8.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/hook/cmake_prefix_path.sh'
+[8.367s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/bin'
+[8.367s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/lib/pkgconfig/ur_simulation_gazebo.pc'
+[8.368s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/lib/python3.10/site-packages'
+[8.370s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/bin'
+[8.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.ps1'
+[8.375s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.dsv'
+[8.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.sh'
+[8.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.bash'
+[8.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.zsh'
+[8.386s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/colcon-core/packages/ur_simulation_gazebo)
+[9.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_controller', 'pythonpath_develop')
+[9.570s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nta/workspaces/ur_gazebo/build/my_controller' returned '0': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data
+[9.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/build/my_controller/share/my_controller/hook/pythonpath_develop.ps1'
+[9.575s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/build/my_controller/share/my_controller/hook/pythonpath_develop.dsv'
+[9.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/build/my_controller/share/my_controller/hook/pythonpath_develop.sh'
+[9.584s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller' for CMake module files
+[9.591s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller' for CMake config files
+[9.608s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller/lib'
+[9.609s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller/bin'
+[9.610s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller/lib/pkgconfig/my_controller.pc'
+[9.611s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages'
+[9.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_controller', 'pythonpath')
+[9.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/pythonpath.ps1'
+[9.616s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/pythonpath.dsv'
+[9.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/hook/pythonpath.sh'
+[9.620s] Level 1:colcon.colcon_core.environment:checking '/home/nta/workspaces/ur_gazebo/install/my_controller/bin'
+[9.621s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_controller)
+[9.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/package.ps1'
+[9.624s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/package.dsv'
+[9.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/package.sh'
+[9.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/package.bash'
+[9.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/nta/workspaces/ur_gazebo/install/my_controller/share/my_controller/package.zsh'
+[9.634s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nta/workspaces/ur_gazebo/install/my_controller/share/colcon-core/packages/my_controller)
+[9.636s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.637s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.637s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.637s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.690s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.690s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.691s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.790s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.791s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nta/workspaces/ur_gazebo/install/local_setup.ps1'
+[9.796s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nta/workspaces/ur_gazebo/install/_local_setup_util_ps1.py'
+[9.802s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nta/workspaces/ur_gazebo/install/setup.ps1'
+[9.809s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nta/workspaces/ur_gazebo/install/local_setup.sh'
+[9.813s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nta/workspaces/ur_gazebo/install/_local_setup_util_sh.py'
+[9.816s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nta/workspaces/ur_gazebo/install/setup.sh'
+[9.823s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nta/workspaces/ur_gazebo/install/local_setup.bash'
+[9.827s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nta/workspaces/ur_gazebo/install/setup.bash'
+[9.835s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nta/workspaces/ur_gazebo/install/local_setup.zsh'
+[9.838s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nta/workspaces/ur_gazebo/install/setup.zsh'

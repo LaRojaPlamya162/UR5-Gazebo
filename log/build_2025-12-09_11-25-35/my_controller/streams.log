@@ -1,0 +1,23 @@
+[1.546s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/my_controller': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data
+[2.006s] running develop
+[2.296s] running egg_info
+[2.296s] creating my_controller.egg-info
+[2.297s] writing my_controller.egg-info/PKG-INFO
+[2.297s] writing dependency_links to my_controller.egg-info/dependency_links.txt
+[2.298s] writing entry points to my_controller.egg-info/entry_points.txt
+[2.298s] writing requirements to my_controller.egg-info/requires.txt
+[2.298s] writing top-level names to my_controller.egg-info/top_level.txt
+[2.298s] writing manifest file 'my_controller.egg-info/SOURCES.txt'
+[2.301s] reading manifest file 'my_controller.egg-info/SOURCES.txt'
+[2.302s] writing manifest file 'my_controller.egg-info/SOURCES.txt'
+[2.304s] running build_ext
+[2.305s] Creating /home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages/my-controller.egg-link (link to .)
+[2.309s] Installing controller script to /home/nta/workspaces/ur_gazebo/install/my_controller/lib/controller
+[2.311s] 
+[2.312s] Installed /home/nta/workspaces/ur_gazebo/build/my_controller
+[2.313s] running symlink_data
+[2.313s] creating /home/nta/workspaces/ur_gazebo/install/my_controller/share/ament_index
+[2.313s] creating /home/nta/workspaces/ur_gazebo/install/my_controller/share/ament_index/resource_index
+[2.313s] creating /home/nta/workspaces/ur_gazebo/install/my_controller/share/ament_index/resource_index/packages
+[2.313s] error: can't copy '/home/nta/workspaces/ur_gazebo/build/my_controller/resource/my_controller': doesn't exist or not a regular file
+[2.398s] Invoked command in '/home/nta/workspaces/ur_gazebo/build/my_controller' returned '1': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/my_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/my_controller/build --no-deps symlink_data

@@ -1,0 +1,3 @@
+[console_scripts]
+controller = my_controller.controller:main
+
