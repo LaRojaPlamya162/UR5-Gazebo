@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from controller.models.BC.bc_model import BCPolicy
-from controller.reward import RewardFunction
+from controller.components.reward import RewardFunction
 import torch
 import numpy as np
 import os
