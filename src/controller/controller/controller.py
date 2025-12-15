@@ -1,4 +1,16 @@
 #!/usr/bin/env python3
+from controller.models.BC.bc_model import BCPolicy
+from controller.reward import RewardFunction
+import torch
+import numpy as np
+import os
+import csv
+import random
+from controller.models.SAC.network import Actor,Critic
+from controller.models.SAC.sac_model import SACAgent
+from controller.models.SAC.replay_buffer import ReplayBuffer
+
+# ===== ROS2 Lib =====
 import rclpy
 from rclpy.node import Node
 from gazebo_msgs.msg import ModelStates
@@ -6,13 +18,6 @@ from gazebo_msgs.srv import DeleteEntity
 from gazebo_msgs.srv import SpawnEntity
 from geometry_msgs.msg import Pose
 from nav_msgs.msg import Odometry
-from controller.bc_model import BCPolicy
-from controller.reward import RewardFunction
-import torch
-import numpy as np
-import os
-import csv
-import random
 from ament_index_python.packages import get_package_share_directory
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from sensor_msgs.msg import JointState
@@ -33,9 +38,16 @@ class Controller(Node):
         self.episode = 0
         self.timestep = 0
         self.new_episode_ready = True
+        self.state_dim = 6
+        self.action_dim = 6
+        self.batch_size = 256
+        self.warmup_steps = 500
+        self.total_steps = 0
 
         # ===== Model =====
-        
+        self.replay_buffer = ReplayBuffer(capacity = 1000)
+        self.agent = SACAgent(state_dim = 6, action_dim = 6)
+
         self.model = BCPolicy(state_dim=6, action_dim=6)
         self.model.load_state_dict(torch.load(model_path, weights_only=True))
         self.model.eval()
@@ -103,12 +115,13 @@ class Controller(Node):
         
         self.timestep = 0
         self.episode = 0
-        self.csv = open("bc_log_v4.csv", "w", newline="")
+        self.csv = open("bc_log.csv", "w", newline="")
         self.writer = csv.writer(self.csv)
         self.writer.writerow([
             "timestep",
             "episode",
             "s1","s2","s3","s4","s5","s6",
+            "next_s1","next_s2","next_s3","next_s4","next_s5","next_s6",
             "a1","a2","a3","a4","a5","a6",
             "ball_pos_x","ball_pos_y","ball_pos_z",
             "wrist_3_x", "wrist_3_y", "wrist_3_z",
@@ -126,24 +139,8 @@ class Controller(Node):
     def ball_callback(self, msg):
         pos = msg.pose.pose.position
         x, y, z = pos.x, pos.y, pos.z
-        self.ball_pos = [
-                x,
-                y,
-                z
-            ]
-        # Orientation (quaternion)
-        ori = msg.pose.pose.orientation
-        
+        self.ball_pos = [x,y,z]
 
-        # Linear velocity
-        lin = msg.twist.twist.linear
-        vx, vy, vz = lin.x, lin.y, lin.z
-
-        # Angular velocity
-
-        """self.get_logger().info(
-            f"Pos: [{x:.3f}, {y:.3f}, {z:.3f}] | "
-        )"""
     def control_step(self):
         # ===== Condition rules =====
         if self.resetting or not self.new_episode_ready:
@@ -173,7 +170,7 @@ class Controller(Node):
         with torch.no_grad():
             action = self.model(obs).numpy()
             current_pos = obs
-            next_pos = current_pos.numpy() + action * dt
+            next_pos = current_pos.numpy() #+ action * dt
         
         for i, (low, high) in enumerate(self.JOINT_LIMITS):
             next_pos[i] = np.clip(next_pos[i], low, high)
@@ -220,7 +217,7 @@ class Controller(Node):
         [self.timestep]
         + [self.episode] 
         + current_pos.tolist()
-        #current_pos.numpy().tolist()
+        + next_pos.tolist()
         + action.tolist()
         + self.ball_pos
         + self.joint_pos
