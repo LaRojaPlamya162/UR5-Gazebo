@@ -40,9 +40,8 @@ class Controller(Node):
         self.new_episode_ready = True
         self.state_dim = 6
         self.action_dim = 6
-        self.batch_size = 256
-        self.warmup_steps = 500
         self.total_steps = 0
+        self.prev_state = None
 
         # ===== Model =====
         self.replay_buffer = ReplayBuffer(capacity = 1000)
@@ -98,6 +97,11 @@ class Controller(Node):
             SpawnEntity,
             '/spawn_entity'
         )
+
+        self.set_state_client = self.create_client(
+            SetEntityState,
+            '/gazebo/set_entity_state'
+        )
         # ===== State =====
         
         self.last_joint_state = None
@@ -115,7 +119,7 @@ class Controller(Node):
         
         self.timestep = 0
         self.episode = 0
-        self.csv = open("bc_log.csv", "w", newline="")
+        self.csv = open("log.csv", "w", newline="")
         self.writer = csv.writer(self.csv)
         self.writer.writerow([
             "timestep",
@@ -142,92 +146,129 @@ class Controller(Node):
         self.ball_pos = [x,y,z]
 
     def control_step(self):
-        # ===== Condition rules =====
         if self.resetting or not self.new_episode_ready:
             return
         if self.last_joint_state is None or self.ball_pos is None:
-            #self.get_logger().info(f"Error")
             return
-        if not self.tf_buffer.can_transform("base_link", "wrist_3_link", rclpy.time.Time(seconds = 0)):
+        if not self.tf_buffer.can_transform(
+            "base_link", "wrist_3_link", rclpy.time.Time()
+        ):
             return
-        if self.done_flag:
-            self.resetting = True
-            self.new_episode_ready = False
-            self.reset_episode()
-            return
-        x,y,z = np.nan, np.nan, np.nan
-        
-        # ===== Model prediction =====
+
+        # ===== Build current state s_t =====
         name_to_pos = dict(zip(
             self.last_joint_state.name,
             self.last_joint_state.position
         ))
-        obs = np.array([
-            name_to_pos[j] for j in self.joint_names
-        ], dtype=np.float32)
-        obs = torch.tensor(obs)
-        dt = 0.05
-        with torch.no_grad():
-            action = self.model(obs).numpy()
-            current_pos = obs
-            next_pos = current_pos.numpy() #+ action * dt
-        
-        for i, (low, high) in enumerate(self.JOINT_LIMITS):
-            next_pos[i] = np.clip(next_pos[i], low, high)
-        # ===== Publish trajectory =====
-        traj = JointTrajectory()
-        traj.joint_names = self.joint_names
 
-        point = JointTrajectoryPoint()
-        point.positions = next_pos.tolist()
-        point.time_from_start.sec = 0
-        point.time_from_start.nanosec = int(dt * 1e9)
-        traj.points.append(point)
-        self.pub.publish(traj)
+        obs = np.array(
+            [name_to_pos[j] for j in self.joint_names],
+            dtype=np.float32
+        )
 
-        # ===== Get pose =====
-        
-        try:    
+        # ===== FIRST FRAME =====
+        if self.prev_state is None:
+            self.prev_state = obs.copy()
+            if self.intial_ur5_pose is None:
+                self.intial_ur5_pose = obs.copy().tolist()
+                self.get_logger().info("Initial UR5 pose captured")
+            obs_tensor = torch.from_numpy(obs)
+            with torch.no_grad():
+                action = self.model(obs_tensor).numpy()
+
+            self._publish_action(obs, action)
+            return
+
+        try:
             trans = self.tf_buffer.lookup_transform(
                 "base_link",
                 "wrist_3_link",
                 rclpy.time.Time()
             )
+            ee_pos = [
+                trans.transform.translation.x,
+                trans.transform.translation.y,
+                trans.transform.translation.z
+            ]
+        except Exception:
+            ee_pos = [np.nan, np.nan, np.nan]
 
-            x = trans.transform.translation.x
-            y = trans.transform.translation.y
-            z = trans.transform.translation.z
-        except Exception as e:
-            self.get_logger().warn(str(e))
-        
-        # ===== Log =====
-        self.joint_pos = [x,y,z]
-        reward_fn = RewardFunction(self.ball_pos, self.joint_pos, self.episode_step)
+        self.joint_pos = ee_pos
+
+        # reward for prev action
+        reward_fn = RewardFunction(
+            self.ball_pos,
+            self.joint_pos,
+            self.episode_step
+        )
         reward = reward_fn.reward
-        self.done_flag = reward_fn.done
-        if self.intial_ur5_pose is None and self.last_joint_state is not None:
-            self.intial_ur5_pose = obs.tolist()
-            self.get_logger().info("Initial UR5 pose captured")
-
-        """if self.timestep == 0 :
-            self.intial_ur5_pose = obs.tolist()
-            self.intial_ball_pose = self.ball_pos.copy()"""
-            #self.get_logger().info(self.intial_ball_pose)
+        done = reward_fn.done
+        """if self.done_flag:
+            self.get_logger().info("Done")
+            return"""
+        # ===== LOG (s_t, a_t, r_t, s_{t+1}) =====
         row = (
-        [self.timestep]
-        + [self.episode] 
-        + current_pos.tolist()
-        + next_pos.tolist()
-        + action.tolist()
-        + self.ball_pos
-        + self.joint_pos
-        + [reward]
-        + [self.done_flag]
+            [self.timestep]
+            + [self.episode]
+            + self.prev_state.tolist()
+            + obs.tolist()
+            + self.prev_action.tolist()
+            + self.ball_pos
+            + self.joint_pos
+            + [reward]
+            + [done]    
         )
         self.writer.writerow(row)
-        #self.get_logger().info(f"Sent action: {action}")
-        self.timestep += 1 
+        
+        obs_tensor = torch.from_numpy(obs)
+        with torch.no_grad():
+            action = self.model(obs_tensor).numpy()
+        
+        self._publish_action(obs, action)
+
+        self.prev_state = obs.copy()
+        self.prev_action = action.copy()
+        self.prev_reward = reward
+        self.prev_done = done
+
+        self.timestep += 1
         self.episode_step += 1
+        # ===== Episode end =====
+        if done:
+            self.get_logger().info(f"Episode {self.episode} done → reset")
+            self.resetting = True
+            self.new_episode_ready = False
+            #self.prev_state = self.intial_ur5_pose
+            self.reset_episode()
+            return
+
+        # ===== Choose next action a_t =====
+
+        # ===== Cache for next frame =====
+        """self.prev_state = obs.copy()
+        self.prev_action = action.copy()
+        self.prev_reward = reward
+        self.prev_done = done
+
+        self.timestep += 1
+        self.episode_step += 1"""
+
+
+    def _publish_action(self, obs, action):
+        dt = 0.05
+        target_pos = obs + action * dt
+
+        for i, (low, high) in enumerate(self.JOINT_LIMITS):
+            target_pos[i] = np.clip(target_pos[i], low, high)
+
+        traj = JointTrajectory()
+        traj.joint_names = self.joint_names
+        point = JointTrajectoryPoint()
+        point.positions = target_pos.tolist()
+        point.time_from_start.nanosec = int(dt * 1e9)
+        traj.points.append(point)
+
+        self.pub.publish(traj)
     
     # ===== End of episode reset ====
 
@@ -242,6 +283,7 @@ class Controller(Node):
         #rclpy.spin_once(self, timeout_sec=2.0)
         self.get_logger().info(f"Start respawning ball pose")
         self.reset_ball_pose()
+
     def reset_ur5_pose(self):
         if self.intial_ur5_pose is None:
             return
@@ -250,16 +292,18 @@ class Controller(Node):
         
         point = JointTrajectoryPoint()
         point.positions = self.intial_ur5_pose
-        point.time_from_start.sec = 2  
+        point.time_from_start.sec = 5
 
         traj.points.append(point)
         self.pub.publish(traj)
-        #self.new_episode_ready = False
+        self.new_episode_ready = False
+        #self.resetting = True
 
-    def is_ur5_at_initial_pose(self, tol=1e-2):
+    def is_ur5_at_initial_pose(self, tol=1e-4):
         if self.last_joint_state is None:
             return False
-
+        if self.intial_ur5_pose is None:
+            return False
         name_to_pos = dict(zip(
             self.last_joint_state.name,
             self.last_joint_state.position
@@ -276,6 +320,7 @@ class Controller(Node):
         self.get_logger().info(f"Deleting ball...")
         future = self.delete_client.call_async(delete_req)
         future.add_done_callback(self._on_delete_done)
+        self.ball_pos = None
        
     def _on_delete_done(self, future):
         self.get_logger().info("Spawning ball...")
@@ -302,15 +347,25 @@ class Controller(Node):
 
     def _on_spawn_done(self, future):
         self.get_logger().info("Ball spawned, waiting for UR5...")
+
         def wait_timer():
             if self.is_ur5_at_initial_pose():
-                self.get_logger().info("UR5 ready, start new episode")
+                self.done_flag = False
                 self.resetting = False
                 self.new_episode_ready = True
-                self.destroy_timer(timer)
-                
 
+
+                self.prev_state = None
+                self.prev_action = None
+                self.prev_reward = None
+                self.prev_done = None
+                self.episode_step = 0   
+                self.get_logger().info("New episode started")
+
+                self.destroy_timer(timer)
+        self.wait_count = 0
         timer = self.create_timer(0.1, wait_timer)
+
 
     
 

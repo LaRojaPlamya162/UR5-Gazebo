@@ -39,12 +39,12 @@ def reward(ball_pos, wrist_pos, done, timestep):
 
     # Phase 2: push ball toward edge
     r += -w_edge * d_ball_edge
-
-    # Phase 3: success
-    if done:
-        r += w_success
-
     # time penalty
     r += -w_time * timestep
+    # Phase 3: success
+    if done:
+        if timestep <= 1999: # not force done
+            r += w_success
+
 
     return r
