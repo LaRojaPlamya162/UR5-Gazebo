@@ -44,7 +44,7 @@ class Controller(Node):
         self.prev_done = None
         self.wait_count = 0
         # ===== Model =====
-        self.replay_buffer = ReplayBuffer(capacity = 1000)
+        self.replay = ReplayBuffer(capacity = 1000)
         self.agent = SACAgent(state_dim = 6, action_dim = 6)
         self.model = BCPolicy(state_dim=6, action_dim=6)
         self.model.load_state_dict(torch.load(model_path, weights_only=True))
@@ -157,15 +157,15 @@ class Controller(Node):
             if self.intial_ur5_pose is None:
                 self.intial_ur5_pose = obs.copy().tolist()
                 self.get_logger().info("Initial UR5 pose captured")
-            """obs_tensor = torch.from_numpy(obs)
+            obs_tensor = torch.from_numpy(obs)
             with torch.no_grad():
-                action = self.model(obs_tensor).numpy()"""
-            obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
+                action = self.model(obs_tensor).numpy()
+            """obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
 
             with torch.no_grad():
                 action_tensor, _ = self.agent.actor.sample(obs_tensor)
 
-            action = action_tensor.cpu().numpy()[0]
+            action = action_tensor.cpu().numpy()[0]"""
 
             self.prev_action = action.copy()
             self.prev_reward = 0.0
@@ -211,16 +211,17 @@ class Controller(Node):
         )
         self.writer.writerow(row)
        
-        """obs_tensor = torch.from_numpy(obs)
+        obs_tensor = torch.from_numpy(obs)
         with torch.no_grad():
-            action = self.model(obs_tensor).numpy()"""
-        obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
-
+            action = self.model(obs_tensor).numpy()
+        
+        """obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
         with torch.no_grad():
             action_tensor, _ = self.agent.actor.sample(obs_tensor)
 
         action = action_tensor.cpu().numpy()[0]
-
+        self.replay.push(self.prev_state, self.prev_action, reward, obs, done)"""
+        
         self._publish_action(obs, action)
         
         # ===== Episode end =====
@@ -228,6 +229,7 @@ class Controller(Node):
             self.get_logger().info(f"Episode {self.episode} done → reset")
             self.resetting = True
             self.new_episode_ready = False
+            """self.agent.update(self.replay)"""
             self.reset_episode()
             return
         # ===== Choose next action a_t =====
