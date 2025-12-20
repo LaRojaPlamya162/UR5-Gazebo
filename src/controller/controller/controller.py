@@ -31,6 +31,7 @@ class Controller(Node):
        
         # ===== Info =====
        
+        self.done_flag = False
         self.resetting = False
         self.episode_step = 0
         self.episode = 0
@@ -38,13 +39,16 @@ class Controller(Node):
         self.new_episode_ready = True
         self.state_dim = 6
         self.action_dim = 6
+        self.batch_size = 256
+        self.warmup_steps = 500
+        self.total_steps = 0
         self.prev_state = None
         self.prev_action = None
         self.prev_reward = None
         self.prev_done = None
         self.wait_count = 0
         # ===== Model =====
-        self.replay = ReplayBuffer(capacity = 1000)
+        self.replay_buffer = ReplayBuffer(capacity = 1000)
         self.agent = SACAgent(state_dim = 6, action_dim = 6)
         self.model = BCPolicy(state_dim=6, action_dim=6)
         self.model.load_state_dict(torch.load(model_path, weights_only=True))
@@ -160,13 +164,6 @@ class Controller(Node):
             obs_tensor = torch.from_numpy(obs)
             with torch.no_grad():
                 action = self.model(obs_tensor).numpy()
-            """obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
-
-            with torch.no_grad():
-                action_tensor, _ = self.agent.actor.sample(obs_tensor)
-
-            action = action_tensor.cpu().numpy()[0]"""
-
             self.prev_action = action.copy()
             self.prev_reward = 0.0
             self.prev_done = False
@@ -214,32 +211,29 @@ class Controller(Node):
         obs_tensor = torch.from_numpy(obs)
         with torch.no_grad():
             action = self.model(obs_tensor).numpy()
-        
-        """obs_tensor = torch.FloatTensor(obs).unsqueeze(0)  # (1, state_dim)
-        with torch.no_grad():
-            action_tensor, _ = self.agent.actor.sample(obs_tensor)
-
-        action = action_tensor.cpu().numpy()[0]
-        self.replay.push(self.prev_state, self.prev_action, reward, obs, done)"""
-        
         self._publish_action(obs, action)
-        
-        # ===== Episode end =====
-        if done:
-            self.get_logger().info(f"Episode {self.episode} done → reset")
-            self.resetting = True
-            self.new_episode_ready = False
-            """self.agent.update(self.replay)"""
-            self.reset_episode()
-            return
-        # ===== Choose next action a_t =====
-        # ===== Cache for next frame =====
         self.prev_state = obs.copy()
         self.prev_action = action.copy()
         self.prev_reward = reward
         self.prev_done = done
         self.timestep += 1
         self.episode_step += 1
+        # ===== Episode end =====
+        if done:
+            self.get_logger().info(f"Episode {self.episode} done → reset")
+            self.resetting = True
+            self.new_episode_ready = False
+            #self.prev_state = self.intial_ur5_pose
+            self.reset_episode()
+            return
+        # ===== Choose next action a_t =====
+        # ===== Cache for next frame =====
+        """self.prev_state = obs.copy()
+        self.prev_action = action.copy()
+        self.prev_reward = reward
+        self.prev_done = done
+        self.timestep += 1
+        self.episode_step += 1"""
     def _publish_action(self, obs, action):
         dt = 0.05
         target_pos = obs + action * dt
