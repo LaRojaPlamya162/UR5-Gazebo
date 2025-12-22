@@ -67,3 +67,49 @@ class SACAgent:
 
         for target, source in zip(self.q2_target.parameters(), self.q2.parameters()):
             target.data.copy_(self.tau * source.data + (1 - self.tau) * target.data)
+    def save_checkpoint(self, path):
+        checkpoint = {
+            "actor": self.actor.state_dict(),
+            "critic1": self.critic1.state_dict(),
+            "critic2": self.critic2.state_dict(),
+            "target_critic1": self.target_critic1.state_dict(),
+            "target_critic2": self.target_critic2.state_dict(),
+
+            "actor_optimizer": self.actor_optimizer.state_dict(),
+            "critic_optimizer": self.critic_optimizer.state_dict(),
+            "alpha_optimizer": self.alpha_optimizer.state_dict(),
+
+            "log_alpha": self.log_alpha.detach().cpu(),
+
+            "replay_buffer": self.replay_buffer.serialize(),
+
+            "total_steps": self.total_steps,
+            "episode": self.episode,
+        }
+
+        torch.save(checkpoint, path)
+        print(f"[✓] Saved checkpoint to {path}")
+    
+    def load_checkpoint(self, path):
+        checkpoint = torch.load(path, map_location="cpu")
+
+        self.actor.load_state_dict(checkpoint["actor"])
+        self.critic1.load_state_dict(checkpoint["critic1"])
+        self.critic2.load_state_dict(checkpoint["critic2"])
+        self.target_critic1.load_state_dict(checkpoint["target_critic1"])
+        self.target_critic2.load_state_dict(checkpoint["target_critic2"])
+
+        self.actor_optimizer.load_state_dict(checkpoint["actor_optimizer"])
+        self.critic_optimizer.load_state_dict(checkpoint["critic_optimizer"])
+        self.alpha_optimizer.load_state_dict(checkpoint["alpha_optimizer"])
+
+        self.log_alpha.data.copy_(checkpoint["log_alpha"])
+
+        self.replay_buffer.deserialize(checkpoint["replay_buffer"])
+
+        self.total_steps = checkpoint["total_steps"]
+        self.episode = checkpoint["episode"]
+
+        print(f"[✓] Loaded checkpoint from {path}")
+
+

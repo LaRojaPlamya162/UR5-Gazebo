@@ -49,7 +49,11 @@ class Controller(Node):
         self.wait_count = 0
         # ===== Model =====
         self.replay_buffer = ReplayBuffer(capacity = 1000)
-        self.agent = SACAgent(state_dim = 6, action_dim = 6)
+        self.agent = SACAgent(state_dim=6, action_dim=6)
+
+        if os.path.exists("SAC.model"):
+            self.agent.load_checkpoint("SAC.model")
+
         self.model = BCPolicy(state_dim=6, action_dim=6)
         self.model.load_state_dict(torch.load(model_path, weights_only=True))
         self.model.eval()
@@ -114,7 +118,7 @@ class Controller(Node):
        
         self.timestep = 0
         self.episode = 0
-        self.csv = open("log.csv", "w", newline="")
+        self.csv = open("SAC_log.csv", "w", newline="")
         self.writer = csv.writer(self.csv)
         self.writer.writerow([
             "timestep",
@@ -161,9 +165,15 @@ class Controller(Node):
             if self.intial_ur5_pose is None:
                 self.intial_ur5_pose = obs.copy().tolist()
                 self.get_logger().info("Initial UR5 pose captured")
-            obs_tensor = torch.from_numpy(obs)
+            
+            obs_tensor = torch.from_numpy(obs).unsqueeze(0)
             with torch.no_grad():
-                action = self.model(obs_tensor).numpy()
+                action, _ = self.agent.actor.sample(obs_tensor)
+                action = action.numpy()[0]
+
+            '''obs_tensor = torch.from_numpy(obs)
+            with torch.no_grad():
+                action = self.model(obs_tensor).numpy()'''
             self.prev_action = action.copy()
             self.prev_reward = 0.0
             self.prev_done = False
@@ -191,9 +201,6 @@ class Controller(Node):
         )
         reward = reward_fn.reward
         done = reward_fn.done
-        """if self.done_flag:
-            self.get_logger().info("Done")
-            return"""
         # ===== LOG (s_t, a_t, r_t, s_{t+1}) =====
         row = (
             [self.timestep]
@@ -207,10 +214,17 @@ class Controller(Node):
             + [done]
         )
         self.writer.writerow(row)
-       
-        obs_tensor = torch.from_numpy(obs)
+    
+        '''obs_tensor = torch.from_numpy(obs)
         with torch.no_grad():
-            action = self.model(obs_tensor).numpy()
+            action = self.model(obs_tensor).numpy()'''
+
+        obs_tensor = torch.from_numpy(obs).unsqueeze(0)  # (1, state_dim)
+
+        with torch.no_grad():
+            action_tensor, _ = self.agent.actor.sample(obs_tensor)
+            action = action_tensor.cpu().numpy()[0]
+
         self._publish_action(obs, action)
         self.prev_state = obs.copy()
         self.prev_action = action.copy()
@@ -218,22 +232,19 @@ class Controller(Node):
         self.prev_done = done
         self.timestep += 1
         self.episode_step += 1
+        self.replay_buffer.push(self.prev_state,self.prev_action, reward, obs, done)
+        if len(self.replay_buffer) >= 1000:
+            self.agent.update(self.replay_buffer)
+            self.agent.save_checkpoinnnnt("SAC.pth")
+            self.replay_buffer = ReplayBuffer(capacity = 1000)
         # ===== Episode end =====
         if done:
             self.get_logger().info(f"Episode {self.episode} done → reset")
             self.resetting = True
             self.new_episode_ready = False
-            #self.prev_state = self.intial_ur5_pose
             self.reset_episode()
             return
-        # ===== Choose next action a_t =====
-        # ===== Cache for next frame =====
-        """self.prev_state = obs.copy()
-        self.prev_action = action.copy()
-        self.prev_reward = reward
-        self.prev_done = done
-        self.timestep += 1
-        self.episode_step += 1"""
+
     def _publish_action(self, obs, action):
         dt = 0.05
         target_pos = obs + action * dt
