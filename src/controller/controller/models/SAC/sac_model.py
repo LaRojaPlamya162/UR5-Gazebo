@@ -20,9 +20,14 @@ class SACAgent:
         self.actor_opt = torch.optim.Adam(self.actor.parameters(), lr=3e-4)
         self.q1_opt = torch.optim.Adam(self.q1.parameters(), lr=3e-4)
         self.q2_opt = torch.optim.Adam(self.q2.parameters(), lr=3e-4)
+        
+        # ===== SAC v2: auto entropy =====
+        self.target_entropy = -action_dim
+        self.log_alpha = torch.zeros(1, requires_grad = True)
+        self.alpha_opt = torch.optim.Adam([self.log_alpha], lr=3e-4)
 
         self.gamma = 0.99
-        self.alpha = 0.2
+        #self.alpha = 0.2
         self.tau = 0.005
 
     def update(self, replay, batch_size=256):
@@ -34,11 +39,14 @@ class SACAgent:
         s_ = torch.FloatTensor(s_)
         d = torch.FloatTensor(d).unsqueeze(1)
 
+        alpha = self.log_alpha.exp()
+
+        # ===== Critic update =====
         with torch.no_grad():
             a_, logp_ = self.actor.sample(s_)
             q1_t = self.q1_target(s_, a_)
             q2_t = self.q2_target(s_, a_)
-            q_target = r + self.gamma * (1 - d) * (torch.min(q1_t, q2_t) - self.alpha * logp_)
+            q_target = r + self.gamma * (1 - d) * (torch.min(q1_t, q2_t) - alpha * logp_)
 
         # Critic update
         q1_loss = F.mse_loss(self.q1(s, a), q_target)
@@ -55,11 +63,18 @@ class SACAgent:
         # Actor update
         a_new, logp = self.actor.sample(s)
         q_new = torch.min(self.q1(s, a_new), self.q2(s, a_new))
-        actor_loss = (self.alpha * logp - q_new).mean()
+        actor_loss = (alpha * logp - q_new).mean()
 
         self.actor_opt.zero_grad()
         actor_loss.backward()
         self.actor_opt.step()
+
+        # ===== Alpha update ( SAC v2) =====
+        alpha_loss = -(self.log_alpha * (logp + self.target_entropy).detach()).mean()
+
+        self.alpha_opt.zero_grad()
+        alpha_loss.backward()
+        self.alpha_opt.step()
 
         # Soft update target
         for target, source in zip(self.q1_target.parameters(), self.q1.parameters()):
@@ -68,48 +83,36 @@ class SACAgent:
         for target, source in zip(self.q2_target.parameters(), self.q2.parameters()):
             target.data.copy_(self.tau * source.data + (1 - self.tau) * target.data)
     def save_checkpoint(self, path):
-        checkpoint = {
+        torch.save({
             "actor": self.actor.state_dict(),
-            "critic1": self.critic1.state_dict(),
-            "critic2": self.critic2.state_dict(),
-            "target_critic1": self.target_critic1.state_dict(),
-            "target_critic2": self.target_critic2.state_dict(),
-
-            "actor_optimizer": self.actor_optimizer.state_dict(),
-            "critic_optimizer": self.critic_optimizer.state_dict(),
-            "alpha_optimizer": self.alpha_optimizer.state_dict(),
-
+            "q1": self.q1.state_dict(),
+            "q2": self.q2.state_dict(),
+            "q1_target": self.q1_target.state_dict(),
+            "q2_target": self.q2_target.state_dict(),
+            "actor_opt": self.actor_opt.state_dict(),
+            "q1_opt": self.q1_opt.state_dict(),
+            "q2_opt": self.q2_opt.state_dict(),
             "log_alpha": self.log_alpha.detach().cpu(),
+            "alpha_opt": self.alpha_opt.state_dict(),
+        }, path)
+        print(f"[✓] Saved to {path}")
 
-            "replay_buffer": self.replay_buffer.serialize(),
-
-            "total_steps": self.total_steps,
-            "episode": self.episode,
-        }
-
-        torch.save(checkpoint, path)
-        print(f"[✓] Saved checkpoint to {path}")
     
     def load_checkpoint(self, path):
-        checkpoint = torch.load(path, map_location="cpu")
+        #ckpt = torch.load(path, map_location=self.device)
+        ckpt = torch.load(path)
+        self.actor.load_state_dict(ckpt["actor"])
+        self.q1.load_state_dict(ckpt["q1"])
+        self.q2.load_state_dict(ckpt["q2"])
+        self.q1_target.load_state_dict(ckpt["q1_target"])
+        self.q2_target.load_state_dict(ckpt["q2_target"])
 
-        self.actor.load_state_dict(checkpoint["actor"])
-        self.critic1.load_state_dict(checkpoint["critic1"])
-        self.critic2.load_state_dict(checkpoint["critic2"])
-        self.target_critic1.load_state_dict(checkpoint["target_critic1"])
-        self.target_critic2.load_state_dict(checkpoint["target_critic2"])
+        self.actor_opt.load_state_dict(ckpt["actor_opt"])
+        self.q1_opt.load_state_dict(ckpt["q1_opt"])
+        self.q2_opt.load_state_dict(ckpt["q2_opt"])
 
-        self.actor_optimizer.load_state_dict(checkpoint["actor_optimizer"])
-        self.critic_optimizer.load_state_dict(checkpoint["critic_optimizer"])
-        self.alpha_optimizer.load_state_dict(checkpoint["alpha_optimizer"])
+        #self.log_alpha.data.copy_(ckpt["log_alpha"].to(self.device))
+        self.log_alpha.data.copy_(ckpt["log_alpha"])
+        self.alpha_opt.load_state_dict(ckpt["alpha_opt"])
 
-        self.log_alpha.data.copy_(checkpoint["log_alpha"])
-
-        self.replay_buffer.deserialize(checkpoint["replay_buffer"])
-
-        self.total_steps = checkpoint["total_steps"]
-        self.episode = checkpoint["episode"]
-
-        print(f"[✓] Loaded checkpoint from {path}")
-
-
+        print(f"[✓] Loaded from {path}")

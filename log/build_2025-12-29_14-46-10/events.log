@@ -1,0 +1,736 @@
+[0.000000] (-) TimerEvent: {}
+[0.000494] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000611] (ur_description) JobQueued: {'identifier': 'ur_description', 'dependencies': OrderedDict()}
+[0.002013] (ur_simulation_gazebo) JobQueued: {'identifier': 'ur_simulation_gazebo', 'dependencies': OrderedDict([('ur_description', '/home/nta/workspaces/ur_gazebo/install/ur_description')])}
+[0.002202] (ur_description) JobStarted: {'identifier': 'ur_description'}
+[0.058407] (controller) JobStarted: {'identifier': 'controller'}
+[0.090747] (-) TimerEvent: {}
+[0.133222] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'cmake'}
+[0.146034] (ur_description) Command: {'cmd': ['/usr/bin/cmake', '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_description'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[0.198298] (-) TimerEvent: {}
+[0.316271] (-) TimerEvent: {}
+[0.419964] (-) TimerEvent: {}
+[0.524544] (-) TimerEvent: {}
+[0.632995] (-) TimerEvent: {}
+[0.734953] (-) TimerEvent: {}
+[0.842127] (-) TimerEvent: {}
+[0.959354] (-) TimerEvent: {}
+[1.064351] (-) TimerEvent: {}
+[1.082355] (ur_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.165240] (-) TimerEvent: {}
+[1.266371] (-) TimerEvent: {}
+[1.376109] (-) TimerEvent: {}
+[2.891358] (-) TimerEvent: {}
+[5.215212] (-) TimerEvent: {}
+[5.327126] (-) TimerEvent: {}
+[5.510960] (-) TimerEvent: {}
+[5.515232] (ur_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[5.520425] (ur_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.621661] (-) TimerEvent: {}
+[5.726863] (-) TimerEvent: {}
+[5.829459] (-) TimerEvent: {}
+[5.970936] (-) TimerEvent: {}
+[6.073323] (-) TimerEvent: {}
+[6.202457] (-) TimerEvent: {}
+[6.352272] (-) TimerEvent: {}
+[6.482134] (-) TimerEvent: {}
+[6.591043] (-) TimerEvent: {}
+[6.709963] (-) TimerEvent: {}
+[6.826374] (-) TimerEvent: {}
+[6.928961] (-) TimerEvent: {}
+[7.034358] (-) TimerEvent: {}
+[7.135981] (-) TimerEvent: {}
+[7.242153] (-) TimerEvent: {}
+[7.348811] (ur_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.349401] (-) TimerEvent: {}
+[7.377659] (ur_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[7.383176] (ur_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.385107] (ur_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.413340] (ur_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.451854] (-) TimerEvent: {}
+[7.556117] (-) TimerEvent: {}
+[7.658855] (-) TimerEvent: {}
+[7.762964] (-) TimerEvent: {}
+[7.864330] (-) TimerEvent: {}
+[7.969907] (-) TimerEvent: {}
+[8.076017] (-) TimerEvent: {}
+[8.181902] (-) TimerEvent: {}
+[8.284109] (-) TimerEvent: {}
+[8.392531] (-) TimerEvent: {}
+[8.493993] (-) TimerEvent: {}
+[8.600283] (-) TimerEvent: {}
+[8.703967] (-) TimerEvent: {}
+[8.755729] (ur_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[8.784327] (ur_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[8.784967] (ur_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[8.794234] (ur_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[8.806098] (-) TimerEvent: {}
+[8.811252] (ur_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[8.912914] (-) TimerEvent: {}
+[9.019178] (-) TimerEvent: {}
+[9.145385] (-) TimerEvent: {}
+[9.246297] (-) TimerEvent: {}
+[9.351198] (-) TimerEvent: {}
+[9.456806] (-) TimerEvent: {}
+[9.590651] (-) TimerEvent: {}
+[9.704251] (-) TimerEvent: {}
+[9.810455] (-) TimerEvent: {}
+[9.915961] (-) TimerEvent: {}
+[10.022074] (-) TimerEvent: {}
+[10.134860] (-) TimerEvent: {}
+[10.238259] (-) TimerEvent: {}
+[10.342111] (-) TimerEvent: {}
+[10.447405] (-) TimerEvent: {}
+[10.458167] (ur_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[10.550102] (-) TimerEvent: {}
+[10.605225] (controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/nta/workspaces/ur_gazebo/build/controller/build', '--no-deps', 'symlink_data'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:', 'USER': 'nta', 'LC_TIME': 'vi_VN', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/nta', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'vi_VN', 'SYSTEMD_EXEC_PID': '3022', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/nta/workspaces/ur_gazebo/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'nta', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nta', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'vi_VN', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'vi_VN', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.UOF9H3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.110', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'vi_VN', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'vi_VN', 'LC_IDENTIFICATION': 'vi_VN', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nta/workspaces/ur_gazebo/build/controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/nta/workspaces/ur_gazebo/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'vi_VN', 'LC_PAPER': 'vi_VN', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description'}, 'shell': False}
+[10.656284] (-) TimerEvent: {}
+[10.760022] (-) TimerEvent: {}
+[10.869133] (-) TimerEvent: {}
+[10.971225] (-) TimerEvent: {}
+[11.076821] (-) TimerEvent: {}
+[11.178135] (-) TimerEvent: {}
+[11.204480] (ur_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[11.281455] (-) TimerEvent: {}
+[11.382691] (-) TimerEvent: {}
+[11.488056] (-) TimerEvent: {}
+[11.576234] (ur_description) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 1.3.12 (/opt/ros/humble/share/ament_cmake_pytest/cmake)\n'}
+[11.589048] (-) TimerEvent: {}
+[11.691456] (-) TimerEvent: {}
+[11.796559] (-) TimerEvent: {}
+[11.899738] (-) TimerEvent: {}
+[12.005162] (-) TimerEvent: {}
+[12.110292] (-) TimerEvent: {}
+[12.219003] (-) TimerEvent: {}
+[12.321202] (-) TimerEvent: {}
+[12.425331] (-) TimerEvent: {}
+[12.529020] (-) TimerEvent: {}
+[12.642595] (-) TimerEvent: {}
+[12.744928] (-) TimerEvent: {}
+[12.846947] (-) TimerEvent: {}
+[12.965182] (-) TimerEvent: {}
+[13.069195] (-) TimerEvent: {}
+[13.195215] (-) TimerEvent: {}
+[13.279890] (controller) StdoutLine: {'line': b'running develop\n'}
+[13.302500] (-) TimerEvent: {}
+[13.410324] (-) TimerEvent: {}
+[13.515061] (-) TimerEvent: {}
+[13.618234] (-) TimerEvent: {}
+[13.727174] (-) TimerEvent: {}
+[13.829929] (-) TimerEvent: {}
+[13.932262] (-) TimerEvent: {}
+[14.036970] (-) TimerEvent: {}
+[14.144401] (-) TimerEvent: {}
+[14.247297] (-) TimerEvent: {}
+[14.353193] (-) TimerEvent: {}
+[14.459491] (-) TimerEvent: {}
+[14.563186] (-) TimerEvent: {}
+[14.672072] (-) TimerEvent: {}
+[14.774344] (-) TimerEvent: {}
+[14.875990] (-) TimerEvent: {}
+[14.976656] (-) TimerEvent: {}
+[15.078449] (-) TimerEvent: {}
+[15.205657] (-) TimerEvent: {}
+[15.311583] (-) TimerEvent: {}
+[15.414038] (-) TimerEvent: {}
+[15.451223] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[15.459126] (controller) StdoutLine: {'line': b'creating controller.egg-info\n'}
+[15.462684] (controller) StdoutLine: {'line': b'writing controller.egg-info/PKG-INFO\n'}
+[15.463257] (controller) StdoutLine: {'line': b'writing dependency_links to controller.egg-info/dependency_links.txt\n'}
+[15.463934] (controller) StdoutLine: {'line': b'writing entry points to controller.egg-info/entry_points.txt\n'}
+[15.470571] (controller) StdoutLine: {'line': b'writing requirements to controller.egg-info/requires.txt\n'}
+[15.470900] (controller) StdoutLine: {'line': b'writing top-level names to controller.egg-info/top_level.txt\n'}
+[15.471124] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[15.471561] (controller) StdoutLine: {'line': b"reading manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[15.471821] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[15.480792] (controller) StdoutLine: {'line': b'running build_ext\n'}
+[15.481240] (controller) StdoutLine: {'line': b'Creating /home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages/controller.egg-link (link to .)\n'}
+[15.484616] (controller) StdoutLine: {'line': b'Installing controller script to /home/nta/workspaces/ur_gazebo/install/controller/lib/controller\n'}
+[15.486139] (controller) StdoutLine: {'line': b'\n'}
+[15.486614] (controller) StdoutLine: {'line': b'Installed /home/nta/workspaces/ur_gazebo/build/controller\n'}
+[15.492630] (controller) StdoutLine: {'line': b'running symlink_data\n'}
+[15.493247] (controller) StdoutLine: {'line': b'creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index\n'}
+[15.493576] (controller) StdoutLine: {'line': b'creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index\n'}
+[15.498124] (controller) StdoutLine: {'line': b'creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index/packages\n'}
+[15.500277] (controller) StdoutLine: {'line': b'symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/resource/controller -> /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index/packages\n'}
+[15.503073] (controller) StdoutLine: {'line': b'symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/package.xml -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller\n'}
+[15.503775] (controller) StdoutLine: {'line': b'creating /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models\n'}
+[15.510011] (controller) StdoutLine: {'line': b'creating /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC\n'}
+[15.510895] (controller) StdoutLine: {'line': b'symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/controller/models/BC/bc_model.pth -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC\n'}
+[15.511252] (controller) StdoutLine: {'line': b'symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/controller/models/BC/bc_model_v2.pth -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC\n'}
+[15.518903] (-) TimerEvent: {}
+[15.623019] (-) TimerEvent: {}
+[15.680121] (controller) CommandEnded: {'returncode': 0}
+[15.725211] (-) TimerEvent: {}
+[15.822985] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[15.831252] (-) TimerEvent: {}
+[15.934552] (-) TimerEvent: {}
+[16.039317] (-) TimerEvent: {}
+[16.142554] (-) TimerEvent: {}
+[16.251989] (-) TimerEvent: {}
+[16.357002] (-) TimerEvent: {}
+[16.461037] (-) TimerEvent: {}
+[16.563643] (-) TimerEvent: {}
+[16.664884] (-) TimerEvent: {}
+[16.767011] (-) TimerEvent: {}
+[16.874421] (-) TimerEvent: {}
+[16.976069] (-) TimerEvent: {}
+[17.077261] (-) TimerEvent: {}
+[17.189312] (-) TimerEvent: {}
+[17.298465] (-) TimerEvent: {}
+[17.411436] (-) TimerEvent: {}
+[17.520110] (-) TimerEvent: {}
+[17.621988] (-) TimerEvent: {}
+[17.731194] (-) TimerEvent: {}
+[17.832673] (-) TimerEvent: {}
+[17.894736] (ur_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[17.934143] (-) TimerEvent: {}
+[17.965972] (ur_description) StdoutLine: {'line': b'-- Generating done\n'}
+[17.977564] (ur_description) StdoutLine: {'line': b'-- Build files have been written to: /home/nta/workspaces/ur_gazebo/build/ur_description\n'}
+[18.023623] (ur_description) CommandEnded: {'returncode': 0}
+[18.025925] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'build'}
+[18.027771] (ur_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nta/workspaces/ur_gazebo/build/ur_description', '--', '-j4', '-l4'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[18.042512] (-) TimerEvent: {}
+[18.144724] (-) TimerEvent: {}
+[18.247727] (-) TimerEvent: {}
+[18.350983] (-) TimerEvent: {}
+[18.455799] (-) TimerEvent: {}
+[18.523100] (ur_description) CommandEnded: {'returncode': 0}
+[18.535237] (ur_description) JobProgress: {'identifier': 'ur_description', 'progress': 'install'}
+[18.556942] (-) TimerEvent: {}
+[18.593602] (ur_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nta/workspaces/ur_gazebo/build/ur_description'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_description'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[18.660987] (-) TimerEvent: {}
+[18.672416] (ur_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.672831] (ur_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[18.679402] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/initial_positions.yaml\n'}
+[18.754966] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10/default_kinematics.yaml\n'}
+[18.763019] (-) TimerEvent: {}
+[18.830741] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10/joint_limits.yaml\n'}
+[18.863999] (-) TimerEvent: {}
+[18.905260] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10/physical_parameters.yaml\n'}
+[18.965628] (-) TimerEvent: {}
+[19.016196] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10/visual_parameters.yaml\n'}
+[19.066930] (-) TimerEvent: {}
+[19.138910] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10e/default_kinematics.yaml\n'}
+[19.168335] (-) TimerEvent: {}
+[19.234229] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10e/joint_limits.yaml\n'}
+[19.270309] (-) TimerEvent: {}
+[19.320548] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10e/physical_parameters.yaml\n'}
+[19.370962] (-) TimerEvent: {}
+[19.402444] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur10e/visual_parameters.yaml\n'}
+[19.529661] (-) TimerEvent: {}
+[20.226262] (-) TimerEvent: {}
+[22.172327] (-) TimerEvent: {}
+[23.070631] (-) TimerEvent: {}
+[23.151004] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur12e/default_kinematics.yaml\n'}
+[23.180468] (-) TimerEvent: {}
+[23.246587] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur12e/joint_limits.yaml\n'}
+[23.281692] (-) TimerEvent: {}
+[23.346250] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur12e/physical_parameters.yaml\n'}
+[23.382311] (-) TimerEvent: {}
+[23.432983] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur12e/visual_parameters.yaml\n'}
+[23.485791] (-) TimerEvent: {}
+[23.519079] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur15/default_kinematics.yaml\n'}
+[23.585190] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur15/joint_limits.yaml\n'}
+[23.585871] (-) TimerEvent: {}
+[23.650940] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur15/physical_parameters.yaml\n'}
+[23.689235] (-) TimerEvent: {}
+[23.710506] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur15/visual_parameters.yaml\n'}
+[23.780543] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur16e/default_kinematics.yaml\n'}
+[23.791323] (-) TimerEvent: {}
+[23.842806] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur16e/joint_limits.yaml\n'}
+[23.893787] (-) TimerEvent: {}
+[23.913106] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur16e/physical_parameters.yaml\n'}
+[23.975765] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur16e/visual_parameters.yaml\n'}
+[23.994013] (-) TimerEvent: {}
+[24.043412] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur18/default_kinematics.yaml\n'}
+[24.096258] (-) TimerEvent: {}
+[24.119017] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur18/joint_limits.yaml\n'}
+[24.181021] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur18/physical_parameters.yaml\n'}
+[24.201514] (-) TimerEvent: {}
+[24.255685] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur18/visual_parameters.yaml\n'}
+[24.304367] (-) TimerEvent: {}
+[24.320116] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur20/default_kinematics.yaml\n'}
+[24.391312] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur20/joint_limits.yaml\n'}
+[24.405857] (-) TimerEvent: {}
+[24.464133] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur20/physical_parameters.yaml\n'}
+[24.507539] (-) TimerEvent: {}
+[24.541027] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur20/visual_parameters.yaml\n'}
+[24.609803] (-) TimerEvent: {}
+[24.618694] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3/default_kinematics.yaml\n'}
+[24.699157] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3/joint_limits.yaml\n'}
+[24.712279] (-) TimerEvent: {}
+[24.777886] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3/physical_parameters.yaml\n'}
+[24.815734] (-) TimerEvent: {}
+[24.866178] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3/visual_parameters.yaml\n'}
+[24.917410] (-) TimerEvent: {}
+[24.963457] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur30/default_kinematics.yaml\n'}
+[25.020277] (-) TimerEvent: {}
+[25.046362] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur30/joint_limits.yaml\n'}
+[25.125589] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur30/physical_parameters.yaml\n'}
+[25.126146] (-) TimerEvent: {}
+[25.202231] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur30/visual_parameters.yaml\n'}
+[25.228918] (-) TimerEvent: {}
+[25.283355] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3e/default_kinematics.yaml\n'}
+[25.330467] (-) TimerEvent: {}
+[25.394712] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3e/joint_limits.yaml\n'}
+[25.435201] (-) TimerEvent: {}
+[25.484152] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3e/physical_parameters.yaml\n'}
+[25.538761] (-) TimerEvent: {}
+[25.562204] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur3e/visual_parameters.yaml\n'}
+[25.640772] (-) TimerEvent: {}
+[25.667363] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5/default_kinematics.yaml\n'}
+[25.741905] (-) TimerEvent: {}
+[25.783442] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5/joint_limits.yaml\n'}
+[25.846687] (-) TimerEvent: {}
+[25.916905] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5/physical_parameters.yaml\n'}
+[25.947120] (-) TimerEvent: {}
+[26.049714] (-) TimerEvent: {}
+[26.052683] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5/visual_parameters.yaml\n'}
+[26.140203] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5e/default_kinematics.yaml\n'}
+[26.150075] (-) TimerEvent: {}
+[26.204032] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5e/joint_limits.yaml\n'}
+[26.252288] (-) TimerEvent: {}
+[26.272050] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5e/physical_parameters.yaml\n'}
+[26.339164] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur5e/visual_parameters.yaml\n'}
+[26.353972] (-) TimerEvent: {}
+[26.437036] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur7e/default_kinematics.yaml\n'}
+[26.457352] (-) TimerEvent: {}
+[26.534408] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur7e/joint_limits.yaml\n'}
+[26.558286] (-) TimerEvent: {}
+[26.637440] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur7e/physical_parameters.yaml\n'}
+[26.661228] (-) TimerEvent: {}
+[26.728749] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur7e/visual_parameters.yaml\n'}
+[26.765460] (-) TimerEvent: {}
+[26.840901] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur8long/default_kinematics.yaml\n'}
+[26.866269] (-) TimerEvent: {}
+[26.953668] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur8long/joint_limits.yaml\n'}
+[26.971053] (-) TimerEvent: {}
+[27.055381] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur8long/physical_parameters.yaml\n'}
+[27.075068] (-) TimerEvent: {}
+[27.168895] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/config/ur8long/visual_parameters.yaml\n'}
+[27.176388] (-) TimerEvent: {}
+[27.242503] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/launch/view_ur.launch.py\n'}
+[27.277406] (-) TimerEvent: {}
+[27.340602] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/base.stl\n'}
+[27.378688] (-) TimerEvent: {}
+[27.427137] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/forearm.stl\n'}
+[27.481938] (-) TimerEvent: {}
+[27.538531] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/shoulder.stl\n'}
+[27.582849] (-) TimerEvent: {}
+[27.636549] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/upperarm.stl\n'}
+[27.684929] (-) TimerEvent: {}
+[27.723346] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/wrist1.stl\n'}
+[27.787225] (-) TimerEvent: {}
+[27.804305] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/wrist2.stl\n'}
+[27.873099] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/collision/wrist3.stl\n'}
+[27.890221] (-) TimerEvent: {}
+[27.976038] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/base.dae\n'}
+[27.996967] (-) TimerEvent: {}
+[28.067054] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/forearm.dae\n'}
+[28.102932] (-) TimerEvent: {}
+[28.185066] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/shoulder.dae\n'}
+[28.204126] (-) TimerEvent: {}
+[28.287776] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/upperarm.dae\n'}
+[28.305212] (-) TimerEvent: {}
+[28.370258] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/wrist1.dae\n'}
+[28.408803] (-) TimerEvent: {}
+[28.472593] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/wrist2.dae\n'}
+[28.510270] (-) TimerEvent: {}
+[28.575140] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10/visual/wrist3.dae\n'}
+[28.610939] (-) TimerEvent: {}
+[28.662201] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/base.stl\n'}
+[28.712877] (-) TimerEvent: {}
+[28.774960] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/forearm.stl\n'}
+[28.814838] (-) TimerEvent: {}
+[28.875283] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/shoulder.stl\n'}
+[28.918040] (-) TimerEvent: {}
+[28.961965] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/upperarm.stl\n'}
+[29.018543] (-) TimerEvent: {}
+[29.031818] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist1.stl\n'}
+[29.119052] (-) TimerEvent: {}
+[29.121295] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist2.stl\n'}
+[29.206760] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/collision/wrist3.stl\n'}
+[29.222015] (-) TimerEvent: {}
+[29.266557] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/base.dae\n'}
+[29.322797] (-) TimerEvent: {}
+[29.327335] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/forearm.dae\n'}
+[29.383398] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/shoulder.dae\n'}
+[29.425996] (-) TimerEvent: {}
+[29.435498] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/upperarm.dae\n'}
+[29.489224] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist1.dae\n'}
+[29.528545] (-) TimerEvent: {}
+[29.559848] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist2.dae\n'}
+[29.629008] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur10e/visual/wrist3.dae\n'}
+[29.629335] (-) TimerEvent: {}
+[29.720635] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/LICENSE.txt\n'}
+[29.732642] (-) TimerEvent: {}
+[29.794612] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/base.stl\n'}
+[29.833651] (-) TimerEvent: {}
+[29.853567] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/forearm.stl\n'}
+[29.918032] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/shoulder.stl\n'}
+[29.935362] (-) TimerEvent: {}
+[29.979449] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/upperarm.stl\n'}
+[30.036121] (-) TimerEvent: {}
+[30.044090] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/wrist1.stl\n'}
+[30.108528] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/wrist2.stl\n'}
+[30.141073] (-) TimerEvent: {}
+[30.191665] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/collision/wrist3.stl\n'}
+[30.242057] (-) TimerEvent: {}
+[30.309380] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/UR15_DIFF_8bit_2K.jpg\n'}
+[30.342911] (-) TimerEvent: {}
+[30.378395] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/base.dae\n'}
+[30.444463] (-) TimerEvent: {}
+[30.446864] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/forearm.dae\n'}
+[30.520140] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/shoulder.dae\n'}
+[30.546169] (-) TimerEvent: {}
+[30.613107] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/upperarm.dae\n'}
+[30.647186] (-) TimerEvent: {}
+[30.679760] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/wrist1.dae\n'}
+[30.750879] (-) TimerEvent: {}
+[30.754426] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/wrist2.dae\n'}
+[30.837040] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur15/visual/wrist3.dae\n'}
+[30.852825] (-) TimerEvent: {}
+[30.922885] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur16e/collision/forearm.stl\n'}
+[30.954318] (-) TimerEvent: {}
+[30.990673] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur16e/collision/upperarm.stl\n'}
+[31.055578] (-) TimerEvent: {}
+[31.080106] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur16e/visual/forearm.dae\n'}
+[31.157437] (-) TimerEvent: {}
+[31.181850] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur16e/visual/upperarm.dae\n'}
+[31.254258] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/LICENSE.txt\n'}
+[31.258516] (-) TimerEvent: {}
+[31.328080] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/collision/forearm.stl\n'}
+[31.360733] (-) TimerEvent: {}
+[31.390121] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/collision/upperarm.stl\n'}
+[31.461974] (-) TimerEvent: {}
+[31.465177] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/visual/UR18_DIFF_8bit_2K.jpg\n'}
+[31.543947] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/visual/forearm.dae\n'}
+[31.563013] (-) TimerEvent: {}
+[31.617204] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur18/visual/upperarm.dae\n'}
+[31.663698] (-) TimerEvent: {}
+[31.697622] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/LICENSE.txt\n'}
+[31.765957] (-) TimerEvent: {}
+[31.792763] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/base.stl\n'}
+[31.867622] (-) TimerEvent: {}
+[31.884655] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/forearm.stl\n'}
+[31.968669] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/shoulder.stl\n'}
+[31.969055] (-) TimerEvent: {}
+[32.051856] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/upperarm.stl\n'}
+[32.070048] (-) TimerEvent: {}
+[32.136401] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/wrist1.stl\n'}
+[32.174958] (-) TimerEvent: {}
+[32.217558] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/wrist2.stl\n'}
+[32.277326] (-) TimerEvent: {}
+[32.288019] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/collision/wrist3.stl\n'}
+[32.358870] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/UR20_DIFF_8bit_2K.png\n'}
+[32.380809] (-) TimerEvent: {}
+[32.435715] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/base.dae\n'}
+[32.481909] (-) TimerEvent: {}
+[32.512360] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/forearm.dae\n'}
+[32.584995] (-) TimerEvent: {}
+[32.593902] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/shoulder.dae\n'}
+[32.687143] (-) TimerEvent: {}
+[32.692474] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/upperarm.dae\n'}
+[32.761629] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/wrist1.dae\n'}
+[32.788821] (-) TimerEvent: {}
+[32.858287] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/wrist2.dae\n'}
+[32.890094] (-) TimerEvent: {}
+[32.935356] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur20/visual/wrist3.dae\n'}
+[32.993563] (-) TimerEvent: {}
+[33.009284] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/base.stl\n'}
+[33.073976] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/forearm.stl\n'}
+[33.094689] (-) TimerEvent: {}
+[33.173114] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/shoulder.stl\n'}
+[33.195262] (-) TimerEvent: {}
+[33.243082] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/upperarm.stl\n'}
+[33.296238] (-) TimerEvent: {}
+[33.335245] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/wrist1.stl\n'}
+[33.397476] (-) TimerEvent: {}
+[33.421725] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/wrist2.stl\n'}
+[33.499302] (-) TimerEvent: {}
+[33.519135] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/collision/wrist3.stl\n'}
+[33.601042] (-) TimerEvent: {}
+[33.613748] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/base.dae\n'}
+[33.687305] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/forearm.dae\n'}
+[33.703876] (-) TimerEvent: {}
+[33.764717] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/shoulder.dae\n'}
+[33.806062] (-) TimerEvent: {}
+[33.825065] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/upperarm.dae\n'}
+[33.899145] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/wrist1.dae\n'}
+[33.907270] (-) TimerEvent: {}
+[33.980452] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/wrist2.dae\n'}
+[34.008228] (-) TimerEvent: {}
+[34.067432] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3/visual/wrist3.dae\n'}
+[34.116893] (-) TimerEvent: {}
+[34.151315] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/LICENSE.txt\n'}
+[34.218002] (-) TimerEvent: {}
+[34.223161] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/collision/forearm.stl\n'}
+[34.298367] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/collision/upperarm.stl\n'}
+[34.319802] (-) TimerEvent: {}
+[34.361554] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/visual/UR30_DIFF_8bit_2K.png\n'}
+[34.422517] (-) TimerEvent: {}
+[34.453949] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/visual/forearm.dae\n'}
+[34.523469] (-) TimerEvent: {}
+[34.545528] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur30/visual/upperarm.dae\n'}
+[34.620892] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/base.stl\n'}
+[34.624137] (-) TimerEvent: {}
+[34.680135] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/forearm.stl\n'}
+[34.725691] (-) TimerEvent: {}
+[34.745309] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/shoulder.stl\n'}
+[34.814124] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/upperarm.stl\n'}
+[34.826275] (-) TimerEvent: {}
+[34.883301] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist1.stl\n'}
+[34.927992] (-) TimerEvent: {}
+[34.958973] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist2.stl\n'}
+[35.034882] (-) TimerEvent: {}
+[35.049573] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/collision/wrist3.stl\n'}
+[35.116885] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/base.dae\n'}
+[35.138068] (-) TimerEvent: {}
+[35.197269] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/forearm.dae\n'}
+[35.240034] (-) TimerEvent: {}
+[35.258759] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/shoulder.dae\n'}
+[35.340163] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/upperarm.dae\n'}
+[35.340863] (-) TimerEvent: {}
+[35.438100] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist1.dae\n'}
+[35.442072] (-) TimerEvent: {}
+[35.527633] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist2.dae\n'}
+[35.543465] (-) TimerEvent: {}
+[35.601575] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur3e/visual/wrist3.dae\n'}
+[35.644940] (-) TimerEvent: {}
+[35.664313] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/base.stl\n'}
+[35.747245] (-) TimerEvent: {}
+[35.754986] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/forearm.stl\n'}
+[35.824559] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/shoulder.stl\n'}
+[35.848642] (-) TimerEvent: {}
+[35.891259] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/upperarm.stl\n'}
+[35.948993] (-) TimerEvent: {}
+[35.970995] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/wrist1.stl\n'}
+[36.048309] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/wrist2.stl\n'}
+[36.050128] (-) TimerEvent: {}
+[36.135073] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/collision/wrist3.stl\n'}
+[36.153230] (-) TimerEvent: {}
+[36.208794] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/base.dae\n'}
+[36.253774] (-) TimerEvent: {}
+[36.293705] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/forearm.dae\n'}
+[36.356681] (-) TimerEvent: {}
+[36.377336] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/shoulder.dae\n'}
+[36.453950] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/upperarm.dae\n'}
+[36.457926] (-) TimerEvent: {}
+[36.520279] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/wrist1.dae\n'}
+[36.558875] (-) TimerEvent: {}
+[36.587082] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/wrist2.dae\n'}
+[36.659792] (-) TimerEvent: {}
+[36.706080] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5/visual/wrist3.dae\n'}
+[36.764899] (-) TimerEvent: {}
+[36.788327] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/base.stl\n'}
+[36.861647] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/forearm.stl\n'}
+[36.865352] (-) TimerEvent: {}
+[36.937715] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/shoulder.stl\n'}
+[36.967555] (-) TimerEvent: {}
+[37.003619] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/upperarm.stl\n'}
+[37.068696] (-) TimerEvent: {}
+[37.077074] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist1.stl\n'}
+[37.164835] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist2.stl\n'}
+[37.169392] (-) TimerEvent: {}
+[37.234436] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/collision/wrist3.stl\n'}
+[37.269849] (-) TimerEvent: {}
+[37.305460] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/base.dae\n'}
+[37.362954] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/forearm.dae\n'}
+[37.370864] (-) TimerEvent: {}
+[37.423000] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/shoulder.dae\n'}
+[37.472446] (-) TimerEvent: {}
+[37.489137] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/upperarm.dae\n'}
+[37.568825] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist1.dae\n'}
+[37.573110] (-) TimerEvent: {}
+[37.631552] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist2.dae\n'}
+[37.674857] (-) TimerEvent: {}
+[37.686712] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur5e/visual/wrist3.dae\n'}
+[37.752233] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/LICENSE.txt\n'}
+[37.776695] (-) TimerEvent: {}
+[37.811310] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/collision/forearm.stl\n'}
+[37.877867] (-) TimerEvent: {}
+[37.902663] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/collision/upperarm.stl\n'}
+[37.978370] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/visual/UR8Long_DIFF_8bit_2K.jpg\n'}
+[37.978941] (-) TimerEvent: {}
+[38.047155] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/visual/forearm.dae\n'}
+[38.080204] (-) TimerEvent: {}
+[38.117872] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/meshes/ur8long/visual/upperarm.dae\n'}
+[38.182025] (-) TimerEvent: {}
+[38.196726] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/rviz/view_robot.rviz\n'}
+[38.277411] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/urdf/inc/ur_common.xacro\n'}
+[38.284397] (-) TimerEvent: {}
+[38.335853] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/urdf/inc/ur_transmissions.xacro\n'}
+[38.386297] (-) TimerEvent: {}
+[38.399202] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/urdf/ur.ros2_control.xacro\n'}
+[38.462825] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/urdf/ur.urdf.xacro\n'}
+[38.487241] (-) TimerEvent: {}
+[38.521279] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/urdf/ur_macro.xacro\n'}
+[38.581985] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/test/test_ur_urdf_xacro.py\n'}
+[38.588123] (-) TimerEvent: {}
+[38.635239] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/test/test_view_ur_launch.py\n'}
+[38.688924] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ament_index/resource_index/package_run_dependencies/ur_description\n'}
+[38.689317] (-) TimerEvent: {}
+[38.769386] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ament_index/resource_index/parent_prefix_path/ur_description\n'}
+[38.791004] (-) TimerEvent: {}
+[38.849119] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/environment/ament_prefix_path.sh\n'}
+[38.892056] (-) TimerEvent: {}
+[38.944898] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/environment/ament_prefix_path.dsv\n'}
+[38.993286] (-) TimerEvent: {}
+[39.012396] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/environment/path.sh\n'}
+[39.093768] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/environment/path.dsv\n'}
+[39.094193] (-) TimerEvent: {}
+[39.193019] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/local_setup.bash\n'}
+[39.197459] (-) TimerEvent: {}
+[39.379100] (-) TimerEvent: {}
+[42.872766] (-) TimerEvent: {}
+[42.916615] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/local_setup.sh\n'}
+[42.974217] (-) TimerEvent: {}
+[43.025806] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/local_setup.zsh\n'}
+[43.077886] (-) TimerEvent: {}
+[43.119816] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/local_setup.dsv\n'}
+[43.178940] (-) TimerEvent: {}
+[43.197889] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.dsv\n'}
+[43.273121] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ament_index/resource_index/packages/ur_description\n'}
+[43.281001] (-) TimerEvent: {}
+[43.341198] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake\n'}
+[43.381986] (-) TimerEvent: {}
+[43.409365] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake\n'}
+[43.482493] (ur_description) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_description/share/ur_description/package.xml\n'}
+[43.483045] (-) TimerEvent: {}
+[43.574619] (ur_description) CommandEnded: {'returncode': 0}
+[43.586133] (-) TimerEvent: {}
+[43.689323] (-) TimerEvent: {}
+[43.722347] (ur_description) JobEnded: {'identifier': 'ur_description', 'rc': 0}
+[43.730445] (ur_simulation_gazebo) JobStarted: {'identifier': 'ur_simulation_gazebo'}
+[43.795698] (-) TimerEvent: {}
+[43.816683] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'cmake'}
+[43.830032] (ur_simulation_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Gazebo_Simulation/ur_simulation_gazebo', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[43.897202] (-) TimerEvent: {}
+[43.998142] (-) TimerEvent: {}
+[44.101209] (-) TimerEvent: {}
+[44.204368] (-) TimerEvent: {}
+[44.310615] (-) TimerEvent: {}
+[44.368491] (ur_simulation_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[44.412110] (-) TimerEvent: {}
+[44.514665] (-) TimerEvent: {}
+[44.617247] (-) TimerEvent: {}
+[44.718962] (-) TimerEvent: {}
+[44.822108] (-) TimerEvent: {}
+[44.901866] (ur_simulation_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[44.923099] (-) TimerEvent: {}
+[44.969173] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[45.025098] (-) TimerEvent: {}
+[45.127947] (-) TimerEvent: {}
+[45.232931] (-) TimerEvent: {}
+[45.334922] (-) TimerEvent: {}
+[45.436126] (-) TimerEvent: {}
+[45.537276] (-) TimerEvent: {}
+[45.641190] (-) TimerEvent: {}
+[45.745760] (-) TimerEvent: {}
+[45.800239] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[45.830928] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[45.832184] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[45.836536] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[45.846288] (-) TimerEvent: {}
+[45.863813] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[45.948216] (-) TimerEvent: {}
+[46.055834] (-) TimerEvent: {}
+[46.164172] (-) TimerEvent: {}
+[46.268325] (-) TimerEvent: {}
+[46.374452] (-) TimerEvent: {}
+[46.482687] (-) TimerEvent: {}
+[46.587402] (-) TimerEvent: {}
+[46.692375] (-) TimerEvent: {}
+[46.800027] (-) TimerEvent: {}
+[46.869788] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[46.895736] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[46.898451] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[46.902665] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[46.903281] (-) TimerEvent: {}
+[46.928853] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[47.004112] (-) TimerEvent: {}
+[47.107234] (-) TimerEvent: {}
+[47.209874] (-) TimerEvent: {}
+[47.313200] (-) TimerEvent: {}
+[47.420160] (-) TimerEvent: {}
+[47.524047] (-) TimerEvent: {}
+[47.628135] (-) TimerEvent: {}
+[47.721252] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[47.731055] (-) TimerEvent: {}
+[47.832011] (-) TimerEvent: {}
+[47.933487] (-) TimerEvent: {}
+[48.036251] (-) TimerEvent: {}
+[48.066302] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[48.141185] (-) TimerEvent: {}
+[48.242809] (-) TimerEvent: {}
+[48.328001] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 1.0.13 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)\n'}
+[48.339115] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[48.344074] (-) TimerEvent: {}
+[48.446907] (-) TimerEvent: {}
+[48.458586] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[48.506416] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[48.508035] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[48.509433] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[48.509936] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[48.550165] (-) TimerEvent: {}
+[48.613284] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[48.630112] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Found ament_cmake_pytest: 1.3.12 (/opt/ros/humble/share/ament_cmake_pytest/cmake)\n'}
+[48.651172] (-) TimerEvent: {}
+[48.754967] (-) TimerEvent: {}
+[48.857850] (-) TimerEvent: {}
+[48.959038] (-) TimerEvent: {}
+[48.996065] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Configuring done\n'}
+[49.027201] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Generating done\n'}
+[49.037180] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Build files have been written to: /home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo\n'}
+[49.059896] (-) TimerEvent: {}
+[49.071322] (ur_simulation_gazebo) CommandEnded: {'returncode': 0}
+[49.079348] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'build'}
+[49.079526] (ur_simulation_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo', '--', '-j4', '-l4'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[49.160648] (-) TimerEvent: {}
+[49.263032] (-) TimerEvent: {}
+[49.372189] (-) TimerEvent: {}
+[49.474572] (-) TimerEvent: {}
+[49.481456] (ur_simulation_gazebo) CommandEnded: {'returncode': 0}
+[49.484031] (ur_simulation_gazebo) JobProgress: {'identifier': 'ur_simulation_gazebo', 'progress': 'install'}
+[49.501693] (ur_simulation_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo'], 'cwd': '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:'), ('USER', 'nta'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nta'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '3022'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nta'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nta'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nta:@/tmp/.ICE-unix/1247,unix/nta:/tmp/.ICE-unix/1247'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a78ea4b8_7273_4a9e_ac50_157f58c491bf'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UOF9H3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nta/workspaces/ur_gazebo/build/ur_simulation_gazebo'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nta/workspaces/ur_gazebo/build/my_controller:/home/nta/workspaces/ur_gazebo/install/my_controller/lib/python3.10/site-packages:/home/nta/workspaces/ur_gazebo/build/controller:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nta/workspaces/ur_gazebo/install/ur_description:/home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo:/home/nta/workspaces/ur_gazebo/install/my_controller:/home/nta/workspaces/ur_gazebo/install/controller:/opt/ros/humble')]), 'shell': False}
+[49.567944] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[49.574353] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[49.574998] (-) TimerEvent: {}
+[49.575370] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/config/ur_controllers.yaml\n'}
+[49.654244] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/launch/ur_sim_control.launch.py\n'}
+[49.676030] (-) TimerEvent: {}
+[49.743352] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/launch/ur_sim_moveit.launch.py\n'}
+[49.776790] (-) TimerEvent: {}
+[49.825692] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ament_index/resource_index/package_run_dependencies/ur_simulation_gazebo\n'}
+[49.878185] (-) TimerEvent: {}
+[49.916826] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ament_index/resource_index/parent_prefix_path/ur_simulation_gazebo\n'}
+[49.980827] (-) TimerEvent: {}
+[50.013931] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/ament_prefix_path.sh\n'}
+[50.082289] (-) TimerEvent: {}
+[50.108744] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/ament_prefix_path.dsv\n'}
+[50.184517] (-) TimerEvent: {}
+[50.189635] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/path.sh\n'}
+[50.279947] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/environment/path.dsv\n'}
+[50.285510] (-) TimerEvent: {}
+[50.379653] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.bash\n'}
+[50.386636] (-) TimerEvent: {}
+[50.481286] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.sh\n'}
+[50.490301] (-) TimerEvent: {}
+[50.586447] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.zsh\n'}
+[50.592595] (-) TimerEvent: {}
+[50.659178] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/local_setup.dsv\n'}
+[50.694135] (-) TimerEvent: {}
+[50.740384] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.dsv\n'}
+[50.796973] (-) TimerEvent: {}
+[50.811649] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ament_index/resource_index/packages/ur_simulation_gazebo\n'}
+[50.884848] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/cmake/ur_simulation_gazeboConfig.cmake\n'}
+[50.898119] (-) TimerEvent: {}
+[50.947874] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/cmake/ur_simulation_gazeboConfig-version.cmake\n'}
+[51.005411] (-) TimerEvent: {}
+[51.050570] (ur_simulation_gazebo) StdoutLine: {'line': b'-- Symlinking: /home/nta/workspaces/ur_gazebo/install/ur_simulation_gazebo/share/ur_simulation_gazebo/package.xml\n'}
+[51.106544] (-) TimerEvent: {}
+[51.142410] (ur_simulation_gazebo) CommandEnded: {'returncode': 0}
+[51.208989] (-) TimerEvent: {}
+[51.223803] (ur_simulation_gazebo) JobEnded: {'identifier': 'ur_simulation_gazebo', 'rc': 0}
+[51.231380] (-) EventReactorShutdown: {}

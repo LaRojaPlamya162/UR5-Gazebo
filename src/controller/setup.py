@@ -11,10 +11,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['bc_model_v2.pth'])
-        #(os.path.join('share', package_name, 'models'), ['bc_model_v2.pth']),
+        (os.path.join('share', package_name, 'models', 'BC'),[ 'controller/models/BC/bc_model.pth', 'controller/models/BC/bc_model_v2.pth', 'controller/models/SAC/SAC.pth'])
+        #('share/' + package_name + package_name + 'models' + 'BC', ['bc_model_v2.pth'])
         #('share/' + package_name, ['bc_model_v2.pth'])
-        #(os.path.join('share', package_name, 'models'), glob('my_controller/bc_model.pth')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

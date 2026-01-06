@@ -27,7 +27,14 @@ class Controller(Node):
     def __init__(self, node_name, model_name):
         super().__init__(node_name)
         package_share_dir = get_package_share_directory('controller')
-        model_path = os.path.join(package_share_dir, model_name)
+        model_path = os.path.join(
+    package_share_dir,
+    'models',
+    'BC',
+    model_name,
+)
+        print(model_path)
+
        
         # ===== Info =====
        
@@ -51,8 +58,9 @@ class Controller(Node):
         self.replay_buffer = ReplayBuffer(capacity = 1000)
         self.agent = SACAgent(state_dim=6, action_dim=6)
 
-        if os.path.exists("SAC.model"):
-            self.agent.load_checkpoint("SAC.model")
+        if os.path.exists("src/controller/controller/models/SAC/SAC.pth"):
+            self.agent.load_checkpoint("src/controller/controller/models/SAC/SAC.pth")
+            self.get_logger().info("Load checkpoint successfully!")
 
         self.model = BCPolicy(state_dim=6, action_dim=6)
         self.model.load_state_dict(torch.load(model_path, weights_only=True))
@@ -118,7 +126,8 @@ class Controller(Node):
        
         self.timestep = 0
         self.episode = 0
-        self.csv = open("SAC_log.csv", "w", newline="")
+        #self.csv = open("src/controller/controller/models/BC/BC_log.csv","w",newline="")
+        self.csv = open("src/controller/controller/models/SAC/SAC_log.csv","w",newline="")
         self.writer = csv.writer(self.csv)
         self.writer.writerow([
             "timestep",
@@ -170,10 +179,13 @@ class Controller(Node):
             with torch.no_grad():
                 action, _ = self.agent.actor.sample(obs_tensor)
                 action = action.numpy()[0]
-
-            '''obs_tensor = torch.from_numpy(obs)
+            
+            """obs_tensor = torch.from_numpy(obs)
             with torch.no_grad():
-                action = self.model(obs_tensor).numpy()'''
+                dist = self.model(obs_tensor)
+                action = dist.mean  # deterministic
+                action = action.squeeze(0).cpu().numpy()"""
+
             self.prev_action = action.copy()
             self.prev_reward = 0.0
             self.prev_done = False
@@ -214,16 +226,17 @@ class Controller(Node):
             + [done]
         )
         self.writer.writerow(row)
-    
-        '''obs_tensor = torch.from_numpy(obs)
-        with torch.no_grad():
-            action = self.model(obs_tensor).numpy()'''
-
         obs_tensor = torch.from_numpy(obs).unsqueeze(0)  # (1, state_dim)
 
         with torch.no_grad():
             action_tensor, _ = self.agent.actor.sample(obs_tensor)
             action = action_tensor.cpu().numpy()[0]
+        
+        """obs_tensor = torch.from_numpy(obs)
+        with torch.no_grad():
+            dist = self.model(obs_tensor)
+            action = dist.mean  # deterministic
+            action = action.squeeze(0).cpu().numpy()"""
 
         self._publish_action(obs, action)
         self.prev_state = obs.copy()
@@ -235,7 +248,7 @@ class Controller(Node):
         self.replay_buffer.push(self.prev_state,self.prev_action, reward, obs, done)
         if len(self.replay_buffer) >= 1000:
             self.agent.update(self.replay_buffer)
-            self.agent.save_checkpoinnnnt("SAC.pth")
+            self.agent.save_checkpoint("src/controller/controller/models/SAC/SAC.pth")
             self.replay_buffer = ReplayBuffer(capacity = 1000)
         # ===== Episode end =====
         if done:
@@ -314,8 +327,10 @@ class Controller(Node):
         with open(model_path) as f:
             spawn_req.xml = f.read()
         pose = Pose()
-        pose.position.x = random.uniform(0.1, 0.7)
-        pose.position.y = random.uniform(-0.4, 0.4)
+        #pose.position.x = random.uniform(0.1, 0.7)
+        #pose.position.y = random.uniform(-0.4, 0.4)
+        pose.position.x = 0.4
+        pose.position.y = 0.1
         pose.position.z = 0.414
         pose.orientation.w = 1.0
         spawn_req.initial_pose = pose
@@ -341,6 +356,7 @@ class Controller(Node):
    
 def main(args=None):
     rclpy.init(args=args)
+    #node = Controller('bc_controller', 'bc_model.pth')
     node = Controller('bc_controller', 'bc_model_v2.pth')
     rclpy.spin(node)
     node.destroy_node()

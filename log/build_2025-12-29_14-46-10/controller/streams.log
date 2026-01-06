@@ -1,0 +1,28 @@
+[10.564s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/controller': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/controller/build --no-deps symlink_data
+[13.224s] running develop
+[15.400s] running egg_info
+[15.401s] creating controller.egg-info
+[15.405s] writing controller.egg-info/PKG-INFO
+[15.405s] writing dependency_links to controller.egg-info/dependency_links.txt
+[15.412s] writing entry points to controller.egg-info/entry_points.txt
+[15.412s] writing requirements to controller.egg-info/requires.txt
+[15.413s] writing top-level names to controller.egg-info/top_level.txt
+[15.413s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[15.413s] reading manifest file 'controller.egg-info/SOURCES.txt'
+[15.413s] writing manifest file 'controller.egg-info/SOURCES.txt'
+[15.423s] running build_ext
+[15.423s] Creating /home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages/controller.egg-link (link to .)
+[15.427s] Installing controller script to /home/nta/workspaces/ur_gazebo/install/controller/lib/controller
+[15.428s] 
+[15.434s] Installed /home/nta/workspaces/ur_gazebo/build/controller
+[15.435s] running symlink_data
+[15.435s] creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index
+[15.439s] creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index
+[15.442s] creating /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index/packages
+[15.442s] symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/resource/controller -> /home/nta/workspaces/ur_gazebo/install/controller/share/ament_index/resource_index/packages
+[15.445s] symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/package.xml -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller
+[15.451s] creating /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models
+[15.452s] creating /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC
+[15.453s] symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/controller/models/BC/bc_model.pth -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC
+[15.453s] symbolically linking /home/nta/workspaces/ur_gazebo/build/controller/controller/models/BC/bc_model_v2.pth -> /home/nta/workspaces/ur_gazebo/install/controller/share/controller/models/BC
+[15.622s] Invoked command in '/home/nta/workspaces/ur_gazebo/build/controller' returned '0': PYTHONPATH=/home/nta/workspaces/ur_gazebo/build/controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nta/workspaces/ur_gazebo/install/controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nta/workspaces/ur_gazebo/build/controller/build --no-deps symlink_data

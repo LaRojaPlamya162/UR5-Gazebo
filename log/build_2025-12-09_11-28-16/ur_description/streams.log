@@ -1,9 +1,0 @@
-[0.036s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_description
-[0.058s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
-[0.283s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
-[0.292s] -- Found ament_cmake_pytest: 1.3.12 (/opt/ros/humble/share/ament_cmake_pytest/cmake)
-[1.773s] -- Configuring done
-[1.781s] -- Generating done
-[1.788s] -- Build files have been written to: /home/nta/workspaces/ur_gazebo/build/ur_description
-[1.797s] Invoked command in '/home/nta/workspaces/ur_gazebo/build/ur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/nta/workspaces/ur_gazebo/src/Universal_Robots_ROS2_Description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/nta/workspaces/ur_gazebo/install/ur_description
-[1.800s] Invoking command in '/home/nta/workspaces/ur_gazebo/build/ur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nta/workspaces/ur_gazebo/build/ur_description -- -j4 -l4
